@@ -11,7 +11,7 @@
 \usepackage{microtype}
 
 % ── Page Layout ──────────────────────────────────────────────
-\usepackage[top=1.5cm, bottom=1.5cm, left=1.8cm, right=1.8cm]{geometry}
+\usepackage[top=1.3cm, bottom=1.3cm, left=1.6cm, right=1.6cm]{geometry}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 
@@ -47,15 +47,15 @@
   urlcolor   = linkcol,
   linkcolor  = linkcol,
   pdfauthor  = {Wanxing Wu},
-  pdftitle   = {Wanxing Wu --- Curriculum Vitae},
+  pdftitle   = {Wanxing Wu, Curriculum Vitae},
 }
 
 % ── Section Headers ──────────────────────────────────────────
 \titleformat{\section}
   {\large\scshape\bfseries\color{headcol}}
   {}{0em}{\MakeUppercase}
-  [\vspace{2pt}{\color{secline}\rule{\linewidth}{0.4pt}}\vspace{-2pt}]
-\titlespacing*{\section}{0pt}{12pt}{5pt}
+  [\vspace{3pt}{\color{secline}\rule{\linewidth}{0.4pt}}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{7pt}{3pt}
 
 % ── Badge Tags ───────────────────────────────────────────────
 \newcommand{\badge}[2]{%
@@ -112,7 +112,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\fancyfoot[L]{\footnotesize\color{dategray}Wanxing Wu --- Curriculum Vitae}
+\fancyfoot[L]{\footnotesize\color{dategray}Wanxing Wu, Curriculum Vitae}
 \fancyfoot[R]{\footnotesize\color{dategray}\thepage}
 
 % ============================================================
@@ -124,7 +124,7 @@
 \begin{tabularx}{\linewidth}{@{}X r@{}}
   \raisebox{-4pt}{%
     {\fontsize{28}{32}\selectfont\bfseries WANXING WU}%
-    \quad{\large\color{dategray}M.Sc.}%
+    \quad{\large\color{dategray}M.S.}%
   }
   &
   \begin{tabular}[b]{@{}r@{}}
@@ -135,83 +135,59 @@
   \end{tabular}
 \end{tabularx}
 
-\vspace{6pt}
-{\color{rulecol}\rule{\linewidth}{1.2pt}}
 \vspace{4pt}
+{\color{rulecol}\rule{\linewidth}{1.2pt}}
+\vspace{1pt}
 
 % ── ABOUT ────────────────────────────────────────────────────
 \section{About}
 
-I am an M.S.\ student in Computer Science at
-\textbf{Institut Polytechnique de Paris (IP Paris)},
-with a B.S.\ in Data Science and Big Data Technology from
-\textbf{Southern University of Science and Technology (SUSTech)}.
-I am currently a Research Assistant at \textbf{SUSTech-NLP}, advised by Prof.~Guanhua Chen.
+I am an M.S.\ student in Computer Science at \textbf{Institut Polytechnique de Paris (IP Paris)}, with a B.S.\ in Data Science and Big Data Technology from \textbf{Southern University of Science and Technology (SUSTech)}, currently a Research Assistant at \textbf{SUSTech-NLP} (advised by Prof.~Guanhua Chen).
 
-\vspace{5pt}
-My research interests broadly lie in \textbf{efficient LLM systems} and \textbf{agentic AI}.
-I have worked on \textbf{LLM--SLM model collaboration} for efficient routing and inference,
-and I am currently working on \textbf{efficient agentic exploration} for test-time adaptation.
-I am also interested in \textbf{LLM for health}, as an application domain where
-low-resource constraints and trustworthiness are both critical.
+\vspace{3pt}
+My research is on \textbf{how heterogeneous-capability LLMs should work together}. I started with per-query routing: in \textbf{RouterXBench}, I built a three-axis evaluation framework that decouples router intrinsic ability from scenario fit. The same composition question reappears when an agent has to adapt to a new environment over many steps; in \textbf{Scope-then-Cover}, I instantiate this as a single explore action where the strong actor scopes a small candidate subspace and frozen cheap workers verify it in parallel, effective in both test-time adaptation (TTA) and online experiential learning (OEL) settings.
 
 % ── EDUCATION ────────────────────────────────────────────────
 \section{Education}
 
 \entry{\unilogo{ipp.png}\enskip Institut Polytechnique de Paris}{Paris, France}
-\textit{M.S.\ in Computer Science} \hfill \textit{Sep 2025 -- Jul 2027}
+\textit{M.S.\ in Computer Science} \hfill \textit{Sep 2025 -- Sep 2027}
+\begin{itemize}
+  \item \textbf{ReflexSQL}: an exploration-and-memory Text-to-SQL agent on Spider~2.0-Lite \quad [\href{https://wwx777.github.io/assets/reflexsql-poster.pdf}{Poster}].
+\end{itemize}
 
-\vspace{5pt}
+\vspace{3pt}
 \entry{\unilogo{sustech.png}\enskip Southern University of Science and Technology (SUSTech)}{Shenzhen, China}
 \textit{B.S.\ in Data Science and Big Data Technology} \hfill \textit{Sep 2021 -- Jul 2025}
-
-% ── RESEARCH ─────────────────────────────────────────────────
-\section{Research}
-
-\entry{\unilogo{sustech.png}\enskip SUSTech-NLP Group}{Shenzhen, China}
-\textit{Research Assistant}, advised by Prof.~Guanhua Chen. \hfill \textit{Jan 2025 -- Present}
 \begin{itemize}
-  \item \textbf{LLM--SLM Collaboration}: Proposed RouterXBench to decouple router ability from scenario alignment; systematically compared routing signals and showed that internal hidden states capture model uncertainty more effectively than output logits or external embeddings, leading to ProbeDirichlet with learnable Dirichlet aggregation across layers.
-\end{itemize}
-
-% ── INTERNSHIP ───────────────────────────────────────────────
-\section{Internship}
-
-\entry{\raisebox{-0.5pt}{\includegraphics[height=8pt, width=16pt, keepaspectratio]{assets/logos/cv/bgi.png}}\enskip Institute of Intelligent Medical Research (IIMR), BGI}{Shenzhen, China}
-\textit{Machine Learning Intern (AI for Genomics).} \hfill \textit{Jul 2024 -- Jan 2025}
-\begin{itemize}
-  \item Developed cfDNA-based feature representations via statistical filtering and model-guided selection; applied ensemble learning for early colorectal cancer detection, achieving \textbf{94.88\% sensitivity}.
-\end{itemize}
-
-\vspace{4pt}
-\entry{\unilogo{pku.png}\enskip Peking University Shenzhen Hospital}{Shenzhen, China}
-\textit{Data Analyst Intern.} \hfill \textit{Jul 2023 -- Oct 2023}
-\begin{itemize}
-  \item Performed biostatistical analysis on multi-timepoint clinical records to compare postoperative outcomes across surgical methods.
+  \item Bachelor's thesis on LLM-SLM collaborative routing (continued in \textbf{RouterXBench}).
 \end{itemize}
 
 % ── PUBLICATIONS ─────────────────────────────────────────────
 \section{Publications}
 
-\pub{Towards Fair and Comprehensive Evaluation of Routers in Collaborative LLM Systems}{\troute}
-    {\me{Wanxing Wu}\eqstar, He Zhu\eqstar, Yixia Li\eqstar, Yun Chen, Guanhua Chen\corr
-     \quad ($^*$Equal contribution)}
+\pub{Towards Fair and Comprehensive Evaluation of Routers in Collaborative LLM Systems}{}
+    {\me{Wanxing Wu}, He Zhu, Yixia Li, \ldots, Guanhua Chen\corr}
     {Under Review, 2026 \quad[\href{https://arxiv.org/abs/2602.11877}{arXiv:2602.11877}]}
 
-% ── PROJECTS ─────────────────────────────────────────────────
-\section{Academic Projects}
+\pub{Can Weak Models Explore? Scope Then Cover for LLM Agent Adaptation}{}
+    {\me{Wanxing Wu}\eqstar, He Zhu\eqstar, Guanhua Chen\corr
+     \quad ($^*$Equal contribution)}
+    {Under Review, 2026}
 
-\noindent\textbf{ReflexSQL: A Self-Reflective Agent for Robust Text-to-SQL Generation} \hfill \textit{Dec 2025 -- Jan 2026}\\
-\textit{QueryPilots, Institut Polytechnique de Paris} \quad [\href{https://wwx777.github.io/assets/reflexsql-poster.pdf}{Poster}]
-\begin{itemize}
-  \item Built an execution-aware self-reflection framework for enterprise-scale Text-to-SQL on Spider~2.0-Lite, combining candidate voting, execution feedback, and memory-augmented exploration.
-\end{itemize}
+% ── RESEARCH EXPERIENCE ──────────────────────────────────────
+\section{Research Experience}
 
-\vspace{4pt}
-\noindent\textbf{Conservative Off-Policy Trust Region Policy Optimization} \hfill \textit{Nov 2025 -- Jan 2026}
-\begin{itemize}
-  \item Developed a dimension-wise masking strategy for off-policy TRPO that leverages on-policy gradient alignment to suppress conflicting update components, ensuring update directions remain consistent with the on-policy objective; validated on PyBullet/Gym locomotion tasks.
-\end{itemize}
+\entry{\unilogo{sustech.png}\enskip SUSTech-NLP Group}{Shenzhen, China}
+\textit{Research Assistant}, advised by Prof.~Guanhua Chen. \hfill \textit{Jan 2025 -- Present}
+
+Heterogeneous-capability LLM composition: per-query routing and per-step decomposition in agent loops.
+
+\vspace{3pt}
+\entry{\raisebox{-0.5pt}{\includegraphics[height=8pt, width=16pt, keepaspectratio]{assets/logos/cv/bgi.png}}\enskip Institute of Intelligent Medical Research (IIMR), BGI}{Shenzhen, China}
+\textit{Machine Learning Intern (AI for Genomics).} \hfill \textit{Jul 2024 -- Jan 2025}
+
+cfDNA feature representation $+$ ensemble learning for early colorectal cancer detection (\textbf{94.88\% sensitivity}).
 
 % ── HONORS ───────────────────────────────────────────────────
 \section{Honors \& Awards}
@@ -220,13 +196,12 @@ low-resource constraints and trustworthiness are both critical.
   \item \textbf{Outstanding Graduate}, Zhiren College, SUSTech (Jul 2025).
   \item \textbf{Outstanding Graduation Thesis}, Top 5\%, SUSTech (Jul 2025).
   \item Outstanding Student Scholarship, SUSTech (Oct 2024).
-  \item \textbf{MCM/ICM Mathematical Contest in Modeling}, Honorable Mention (Feb 2024).
 \end{itemize}
 
 % ── SKILLS ───────────────────────────────────────────────────
 \section{Skills}
 
-\noindent\textbf{LLM \& ML:} inference pipeline (vLLM, SGLang), agentic-RL workflows, SFT/RL training, model evaluation.\\[3pt]
+\noindent\textbf{LLM \& ML:} inference pipeline (vLLM, SGLang), agentic-RL workflows, SFT/RL training.\\[3pt]
 \noindent\textbf{Programming \& Dev:} Python, PyTorch, Docker, Linux, Git, shell scripting.\\[3pt]
 \noindent\textbf{Languages:} English (IELTS 6.5, CET-4, CET-6); Chinese (Native).
 

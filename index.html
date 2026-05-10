@@ -18,16 +18,15 @@
       </div>
 
       <div class="cv-btn-group">
-        <a class="resume-btn" href="cv.pdf" download>CV (EN)</a>
+        <a class="resume-btn" href="Wanxing_WU.pdf" download>CV (EN)</a>
+        <a class="resume-btn" href="Wanxing_WU_CN.pdf" download>CV (CN)</a>
       </div>
 
       <nav>
         <a href="#about" class="active">About</a>
         <a href="#education">Education</a>
         <a href="#publications">Publications</a>
-        <a href="#research">Research</a>
-        <a href="#internship">Internship</a>
-        <a href="#projects">Projects</a>
+        <a href="#research">Research Experience</a>
         <a href="#honors">Honors</a>
       </nav>
 
@@ -65,12 +64,12 @@
       <section id="about">
         <h2>About</h2>
         <p>
-          I am <strong>Wanxing Wu (吴宛幸)</strong> (<a href="cv.pdf" download>CV</a>), an M.S. student in Computer Science at
-          <img src="assets/logos/ipp.svg" alt="IP Paris" class="news-inline-logo" /> <strong>Institut Polytechnique de Paris (IP Paris)</strong>. I received my B.S. in Data Science and Big Data Technology from the
-          <img src="assets/logos/sustech.png" alt="SUSTech" class="news-inline-logo" /> <strong>Southern University of Science and Technology (SUSTech)</strong>. I am currently a Research Assistant at <strong>SUSTech-NLP</strong>, advised by Prof. Guanhua Chen.
+          I am <strong>Wanxing Wu (吴宛幸)</strong> (<a href="Wanxing_WU.pdf" download>CV</a>), an M.S. student in Computer Science at
+          <img src="assets/logos/ipp.svg" alt="IP Paris" class="news-inline-logo" /> <strong>Institut Polytechnique de Paris (IP Paris)</strong>, with a B.S. in Data Science and Big Data Technology from
+          <img src="assets/logos/sustech.png" alt="SUSTech" class="news-inline-logo" /> <strong>Southern University of Science and Technology (SUSTech)</strong>, currently a Research Assistant at <strong>SUSTech-NLP</strong> (advised by Prof. Guanhua Chen).
         </p>
         <p>
-          My research interests broadly lie in <strong>efficient LLM systems</strong> and <strong>agentic AI</strong>. I have worked on <strong>LLM–SLM model collaboration</strong> for efficient routing and inference, and I am currently working on <strong>efficient agentic exploration</strong> for test-time adaptation. I am also interested in <strong>LLM for health</strong>, as an application domain where low-resource constraints and trustworthiness are both critical.
+          My research is on <strong>how heterogeneous-capability LLMs should work together</strong>. I started with per-query routing: in <strong>RouterXBench</strong>, I built a three-axis evaluation framework that decouples router intrinsic ability from scenario fit. The same composition question reappears when an agent has to adapt to a new environment over many steps; in <strong>Scope-then-Cover</strong>, I instantiate this as a single explore action where the strong actor scopes a small candidate subspace and frozen cheap workers verify it in parallel, effective in both test-time adaptation (TTA) and online experiential learning (OEL) settings.
         </p>
       </section>
 
@@ -82,9 +81,12 @@
             <div>
               <div style="display:flex; justify-content:space-between; align-items:baseline;">
                 <strong>Institut Polytechnique de Paris</strong>
-                <span style="color:#888; font-size:0.9em;">Sep 2025 – Jul 2027</span>
+                <span style="color:#888; font-size:0.9em;">Sep 2025 – Sep 2027</span>
               </div>
               <div style="color:#555; font-size:0.95em;">M.S. in Computer Science</div>
+              <ul style="margin-top:4px; padding-left:1.2em;">
+                <li><strong>ReflexSQL</strong>: an exploration-and-memory Text-to-SQL agent on Spider 2.0-Lite [<a href="assets/reflexsql-poster.pdf" target="_blank">Poster</a>].</li>
+              </ul>
             </div>
           </li>
           <li class="item-with-logo">
@@ -95,6 +97,9 @@
                 <span style="color:#888; font-size:0.9em;">Sep 2021 – Jul 2025</span>
               </div>
               <div style="color:#555; font-size:0.95em;">B.S. in Data Science and Big Data Technology</div>
+              <ul style="margin-top:4px; padding-left:1.2em;">
+                <li>Bachelor's thesis on LLM-SLM collaborative routing (continued in <strong>RouterXBench</strong>).</li>
+              </ul>
             </div>
           </li>
         </ul>
@@ -106,83 +111,44 @@
           <li>
             <div class="paper-line">
               <strong>Towards Fair and Comprehensive Evaluation of Routers in Collaborative LLM Systems</strong>
-              <span class="paper-venue upcoming">Under Review</span>
+              <span class="paper-venue upcoming">Under Review, 2026</span>
             </div>
             <div class="paper-line secondary">
-              <span class="paper-authors small"><strong>Wanxing Wu*</strong>, He Zhu*, Yixia Li*, et al. &nbsp;* Equal contribution</span>
+              <span class="paper-authors small"><strong>Wanxing Wu</strong>, He Zhu, Yixia Li, &hellip;, Guanhua Chen<sup>&dagger;</sup></span>
               <span class="paper-links inline">
                 <a href="https://arxiv.org/abs/2602.11877"><img src="assets/logos/arxiv.svg" alt="arXiv" class="paper-link-icon" /></a>
               </span>
+            </div>
+          </li>
+          <li>
+            <div class="paper-line">
+              <strong>Can Weak Models Explore? Scope Then Cover for LLM Agent Adaptation</strong>
+              <span class="paper-venue upcoming">Under Review, 2026</span>
+            </div>
+            <div class="paper-line secondary">
+              <span class="paper-authors small"><strong>Wanxing Wu*</strong>, He Zhu*, Guanhua Chen<sup>&dagger;</sup> &nbsp;* Equal contribution</span>
             </div>
           </li>
         </ul>
       </section>
 
       <section id="research">
-        <h2>Research</h2>
+        <h2>Research Experience</h2>
         <ul class="logo-list">
           <li class="item-with-logo">
             <img src="assets/logos/sustech.png" alt="SUSTech logo" />
             <div>
               <strong>SUSTech-NLP · Research Assistant</strong>
               <br /><span style="color:#888; font-size:0.9em;">Jan 2025 – Present · Shenzhen, China</span>
-              <ul style="margin-top:4px; padding-left:1.2em;">
-                <li><strong>LLM&ndash;SLM Collaboration:</strong> Proposed RouterXBench to decouple router ability from scenario alignment; systematically compared routing signals and showed that internal hidden states capture model uncertainty more effectively than output logits or external embeddings, leading to ProbeDirichlet with learnable Dirichlet aggregation across layers.</li>
-                <!-- <li><strong>Efficient Agentic Exploration:</strong> Found that small models explore as effectively as large ones if guided to the right subspace. Training LLMs via GRPO to compress search spaces, enabling cheap exploration in complex environments.</li> -->
-              </ul>
+              <div style="margin-top:4px;">Heterogeneous-capability LLM composition: per-query routing and per-step decomposition in agent loops.</div>
             </div>
           </li>
-        </ul>
-      </section>
-
-      <section id="internship">
-        <h2>Internship</h2>
-        <ul class="logo-list">
           <li class="item-with-logo">
             <img src="assets/logos/bgi.png" alt="BGI logo" />
             <div>
-              <strong>Institute of Intelligent Medical Research (IIMR), BGI · Machine Learning Intern</strong>
+              <strong>Institute of Intelligent Medical Research (IIMR), BGI · Machine Learning Intern (AI for Genomics)</strong>
               <br /><span style="color:#888; font-size:0.9em;">Jul 2024 – Jan 2025 · Shenzhen, China</span>
-              <ul style="margin-top:4px; padding-left:1.2em;">
-                <li>Developed cfDNA-based feature representations via statistical filtering and model-guided selection; applied ensemble learning for early colorectal cancer detection, achieving <strong>94.88% sensitivity</strong>.</li>
-              </ul>
-            </div>
-          </li>
-          <li class="item-with-logo">
-            <img src="assets/logos/pku.png" alt="PKU Shenzhen Hospital logo" />
-            <div>
-              <strong>Peking University Shenzhen Hospital · Data Analyst Intern</strong>
-              <br /><span style="color:#888; font-size:0.9em;">Jul 2023 – Oct 2023 · Shenzhen, China</span>
-              <ul style="margin-top:4px; padding-left:1.2em;">
-                <li>Performed biostatistical analysis on multi-timepoint clinical records to compare postoperative outcomes across surgical methods.</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-      <section id="projects">
-        <h2>Academic Projects</h2>
-        <ul class="logo-list">
-          <li>
-            <div>
-              <div class="paper-line">
-                <strong>ReflexSQL: A Self-Reflective Agent for Robust Text-to-SQL Generation</strong>
-                <a href="assets/reflexsql-poster.pdf" target="_blank" class="paper-venue">Poster</a>
-              </div>
-              <br /><span style="color:#888; font-size:0.9em;">Dec 2025 – Jan 2026</span>
-              <ul style="margin-top:4px; padding-left:1.2em;">
-                <li>Built an execution-aware self-reflection framework for enterprise-scale Text-to-SQL, combining candidate voting, execution feedback, and memory-augmented exploration on Spider 2.0-Lite.</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div>
-              <strong>Conservative Off-Policy Trust Region Policy Optimization</strong>
-              <br /><span style="color:#888; font-size:0.9em;">Nov 2025 – Jan 2026</span>
-              <ul style="margin-top:4px; padding-left:1.2em;">
-                <li>Developed a dimension-wise masking strategy for off-policy TRPO that leverages on-policy gradient alignment to suppress conflicting update components, ensuring update directions remain consistent with the on-policy objective; validated on PyBullet/Gym locomotion tasks.</li>
-              </ul>
+              <div style="margin-top:4px;">cfDNA feature representation + ensemble learning for early colorectal cancer detection (<strong>94.88% sensitivity</strong>).</div>
             </div>
           </li>
         </ul>
@@ -194,12 +160,11 @@
           <li><strong>Outstanding Graduate</strong>, Zhiren College, SUSTech (Jul 2025)</li>
           <li><strong>Outstanding Graduation Thesis</strong>, Top 5%, SUSTech (Jul 2025)</li>
           <li>Outstanding Student Scholarship, SUSTech (Oct 2024)</li>
-          <li><strong>MCM/ICM Mathematical Contest in Modeling</strong>, Honorable Mention (Feb 2024)</li>
         </ul>
 
         <h3 style="margin-top:1em;">Technical Skills</h3>
         <ul class="honors-inline-list">
-          <li><strong>LLM:</strong> inference pipeline (vLLM, SGLang), agentic-RL workflows, SFT/RL training, model evaluation</li>
+          <li><strong>LLM:</strong> inference pipeline (vLLM, SGLang), agentic-RL workflows, SFT/RL training</li>
           <li><strong>Programming &amp; Dev:</strong> Python, PyTorch, Docker, Linux, Git, shell scripting</li>
         </ul>
 

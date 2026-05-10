@@ -1,5 +1,5 @@
 % ============================================================
-%  吴宛幸 — 个人简历 (中文版)
+%  吴宛幸  个人简历 (中文版)
 % ============================================================
 \documentclass[10pt, a4paper]{article}
 
@@ -14,6 +14,7 @@
 \usepackage[top=1.2cm, bottom=1.2cm, left=1.5cm, right=1.5cm]{geometry}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
+\linespread{1.0}\selectfont
 
 % ── Packages ─────────────────────────────────────────────────
 \usepackage{xcolor}
@@ -44,7 +45,7 @@
   urlcolor   = linkcol,
   linkcolor  = linkcol,
   pdfauthor  = {吴宛幸},
-  pdftitle   = {吴宛幸 — 个人简历},
+  pdftitle   = {吴宛幸，个人简历},
 }
 
 % ── Section Headers ──────────────────────────────────────────
@@ -72,7 +73,7 @@
 \setlist[itemize,1]{
   leftmargin = 1.3em,
   label      = {\small\textbullet},
-  itemsep    = 1pt,
+  itemsep    = 0pt,
   topsep     = 2pt,
   parsep     = 0pt,
 }
@@ -85,7 +86,7 @@
 \newcommand{\eqstar}{$^{*}$}
 \newcommand{\corr}{$^{\dagger}$}
 
-\def\pubskip{3pt}
+\def\pubskip{2pt}
 
 % Single publication block
 \newcommand{\pub}[4]{%
@@ -131,98 +132,76 @@
   \end{tabular}
 \end{tabularx}
 
-\vspace{6pt}
-{\color{rulecol}\rule{\linewidth}{1.2pt}}
 \vspace{4pt}
+{\color{rulecol}\rule{\linewidth}{1.2pt}}
+\vspace{1pt}
 
 % ── ABOUT ────────────────────────────────────────────────────
 \section{个人简介}
 
-\textbf{巴黎综合理工学院（IP Paris）}计算机科学硕士在读（2025--2027），
-本科毕业于\textbf{南方科技大学}数据科学与大数据技术专业。
-现为\textbf{SUSTech-NLP}科研助理，导师：陈冠华教授。
+\textbf{巴黎综合理工学院（IP Paris）}计算机科学硕士在读，本科毕业于\textbf{南方科技大学}（数据科学与大数据技术），现为 \textbf{SUSTech-NLP} 科研助理（导师：陈冠华教授）。
 
-\vspace{3pt}
-研究兴趣聚焦于\textbf{高效大语言模型系统}与\textbf{智能体 AI}。
-已完成 \textbf{LLM--SLM 大小模型协同}方向的工作（高效路由与推理），
-目前正在研究\textbf{智能体场景下的高效探索}（测试时自适应）。
-同时关注\textbf{医疗健康场景下的大模型应用}，
-探索低资源、高可信度要求下的部署方法。
-一作论文 1 篇（在审）。
+\vspace{2pt}
+我的研究方向是\textbf{异构能力的 LLM 应该如何协作}。我从 per-query 路由切入：在 \textbf{RouterXBench} 中，我设计了一套将 router 内在能力与场景适配性解耦的三轴评估框架。同样的协作问题在 agent 部署到新环境、需要在多步任务中适应时再次出现；在 \textbf{Scope-then-Cover} 中，我将其实例化为单一 explore action：强 actor 提名小候选子空间，冻结的廉价 worker 并行验证；该方案在 test-time adaptation (TTA) 与 online experiential learning (OEL) 两种场景下均有效。
+
+\vspace{2pt}
+一作 / 共同一作论文 2 篇，均在审。
 
 % ── EDUCATION ────────────────────────────────────────────────
 \section{教育经历}
 
 \entry{\unilogo{ipp.png}\enskip 巴黎综合理工学院（Institut Polytechnique de Paris）}{法国巴黎}
-\textit{计算机科学硕士} \hfill \textit{2025.09 -- 2027.07}
+\textit{计算机科学硕士} \hfill \textit{2025.09 -- 2027.09}
+\begin{itemize}
+  \item \textbf{ReflexSQL}：基于探索与记忆的 Text-to-SQL agent，验证于 Spider~2.0-Lite \quad [\href{https://wwx777.github.io/assets/reflexsql-poster.pdf}{海报}]。
+\end{itemize}
 
-\vspace{4pt}
+\vspace{2pt}
 \entry{\unilogo{sustech.png}\enskip 南方科技大学}{深圳}
-\textit{数据科学与大数据技术，工学学士} \hfill \textit{2021.09 -- 2025.07}
-
-% ── EXPERIENCE ───────────────────────────────────────────────
-\section{科研经历}
-
-\entry{\unilogo{sustech.png}\enskip SUSTech-NLP 实验室}{深圳}
-\textit{科研助理}，导师：陈冠华教授 \hfill \textit{2025.01 -- 至今}
+\textit{数据科学与大数据技术，理学学士} \hfill \textit{2021.09 -- 2025.07}
 \begin{itemize}
-  \item \textbf{大小模型协同（RouterXBench）}：提出 RouterXBench 将路由器能力与场景适配性解耦；系统性比较不同路由信号，发现内部隐层状态比输出 logit 和外部 embedding 更能捕捉模型不确定性，由此提出基于可学习 Dirichlet 分布的跨层聚合方法 ProbeDirichlet。
-\end{itemize}
-
-\section{实习经历}
-
-\entry{华大基因（BGI）智能医学研究院（IIMR）}{深圳}
-\textit{机器学习实习生（AI for Genomics）} \hfill \textit{2024.07 -- 2025.01}
-\begin{itemize}
-  \item 构建 cfDNA 特征表示（统计筛选 + 模型导向特征选择），集成学习用于结直肠癌早筛，
-        实现 \textbf{94.88\% 灵敏度}。
-\end{itemize}
-
-\vspace{4pt}
-\entry{\unilogo{pku.png}\enskip 北京大学深圳医院}{深圳}
-\textit{数据分析实习生} \hfill \textit{2023.07 -- 2023.10}
-\begin{itemize}
-  \item 对多时间点临床记录进行生物统计分析，比较不同手术方式的术后结局。
+  \item 本科毕业论文：大小模型协同路由（在 \textbf{RouterXBench} 中延续）。
 \end{itemize}
 
 % ── PUBLICATIONS ─────────────────────────────────────────────
 \section{学术论文}
 
-\pub{Towards Fair and Comprehensive Evaluation of Routers in Collaborative LLM Systems}{\troute}
-    {\me{Wanxing Wu}\eqstar, He Zhu\eqstar, Yixia Li\eqstar, Yun Chen, Guanhua Chen\corr
-     \quad ($^*$同等贡献)}
+\pub{Towards Fair and Comprehensive Evaluation of Routers in Collaborative LLM Systems}{}
+    {\me{Wanxing Wu}, He Zhu, Yixia Li, \ldots, Guanhua Chen\corr}
     {在审，2026 \quad[\href{https://arxiv.org/abs/2602.11877}{arXiv:2602.11877}]}
 
-% ── PROJECTS ─────────────────────────────────────────────────
-\section{项目经历}
+\pub{Can Weak Models Explore? Scope Then Cover for LLM Agent Adaptation}{}
+    {\me{Wanxing Wu}\eqstar, He Zhu\eqstar, Guanhua Chen\corr
+     \quad ($^*$同等贡献)}
+    {在审，2026}
 
-\noindent\textbf{ReflexSQL：面向企业级 Text-to-SQL 的自反思 Agent} \hfill \textit{2025.12 -- 2026.01}\\
-\textit{QueryPilots, Institut Polytechnique de Paris} \quad [\href{https://wwx777.github.io/assets/reflexsql-poster.pdf}{海报}]
-\begin{itemize}
-  \item 在 Spider~2.0-Lite 上构建执行感知自反思框架，结合候选投票、执行反馈与记忆增强探索，处理 800+ 列的企业级数据库。
-\end{itemize}
+% ── RESEARCH EXPERIENCE ──────────────────────────────────────
+\section{科研经历}
 
-\vspace{4pt}
-\noindent\textbf{保守离策略置信域策略优化（Conservative Off-Policy TRPO）} \hfill \textit{2025.11 -- 2026.01}
-\begin{itemize}
-  \item 针对离策略 TRPO 设计逐维掩码策略，利用在策略梯度对齐抑制冲突更新分量，
-        确保更新方向与在策略目标一致；在 PyBullet/Gym 运动控制任务上验证。
-\end{itemize}
+\entry{\unilogo{sustech.png}\enskip SUSTech-NLP 实验室}{深圳}
+\textit{科研助理}，导师：陈冠华教授 \hfill \textit{2025.01 -- 至今}
+
+异构能力 LLM 协作：per-query 路由与 agent 长任务中的 per-step 分工。
+
+\vspace{2pt}
+\entry{华大基因（BGI）智能医学研究院（IIMR）}{深圳}
+\textit{机器学习实习生（AI for Genomics）} \hfill \textit{2024.07 -- 2025.01}
+
+cfDNA 特征表示 $+$ 集成学习用于结直肠癌早筛，灵敏度 \textbf{94.88\%}。
 
 % ── HONORS ───────────────────────────────────────────────────
 \section{荣誉与奖项}
 
 \begin{itemize}[itemsep=0pt, topsep=1pt]
-  \item \textbf{优秀毕业生}，南方科技大学智仁书院（2025.07）
+  \item \textbf{优秀毕业生}，南方科技大学致仁书院（2025.07）
   \item \textbf{优秀毕业论文}，Top 5\%，南方科技大学（2025.07）
   \item 优秀学生奖学金，南方科技大学（2024.10）
-  \item \textbf{美国大学生数学建模竞赛（MCM/ICM）}，Honorable Mention（2024.02）
 \end{itemize}
 
 % ── SKILLS ───────────────────────────────────────────────────
 \section{技能}
 
-\noindent\textbf{大模型与机器学习：} 推理框架（vLLM、SGLang），Agentic-RL 工作流，SFT/RL 训练，模型评测。\\[3pt]
+\noindent\textbf{大模型与机器学习：} 推理框架（vLLM、SGLang），Agentic-RL 工作流，SFT/RL 训练。\\[3pt]
 \noindent\textbf{编程与工具：} Python、PyTorch、Docker、Linux、Git、Shell 脚本。\\[3pt]
 \noindent\textbf{语言：} 英语（IELTS 6.5，CET-4，CET-6）；中文（母语）。
 
