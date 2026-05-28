@@ -1,5 +1,5 @@
 % ============================================================
-%  WANXING WU — Curriculum Vitae
+%  WANXING WU — Curriculum Vitae (Bio / Health Track)
 % ============================================================
 \documentclass[10pt, a4paper]{article}
 
@@ -11,10 +11,10 @@
 \usepackage{microtype}
 
 % ── Page Layout ──────────────────────────────────────────────
-\usepackage[top=0.7cm, bottom=0.7cm, left=1.4cm, right=1.4cm]{geometry}
+\usepackage[top=0.55cm, bottom=0.55cm, left=1.3cm, right=1.3cm]{geometry}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\linespread{0.96}\selectfont
+\linespread{0.94}
 
 % ── Packages ─────────────────────────────────────────────────
 \usepackage{xcolor}
@@ -41,6 +41,7 @@
 \definecolor{taggenomics}{RGB}{40, 140, 90}
 \definecolor{tagrl}{RGB}{180, 100, 20}
 \definecolor{tageff}{RGB}{130, 50, 160}
+\definecolor{tagclin}{RGB}{30, 110, 160}
 \definecolor{tagautoresearch}{RGB}{30, 100, 160}
 \definecolor{oralred}{RGB}{200, 40, 30}
 
@@ -73,6 +74,7 @@
 \newcommand{\tgenomics}{\badge{taggenomics}{genomics}}
 \newcommand{\trl}     {\badge{tagrl}{agentic}}
 \newcommand{\teff}    {\badge{tageff}{efficiency}}
+\newcommand{\tclin}   {\badge{tagclin}{clinical}}
 \newcommand{\tautoresearch} {\badge{tagautoresearch}{autoresearch}}
 
 % ── Bullet Lists ─────────────────────────────────────────────
@@ -152,18 +154,18 @@
 % ── ABOUT ────────────────────────────────────────────────────
 \section{About}
 
-M.S.\ in CS at \textbf{Institut Polytechnique de Paris (IP Paris)}; B.S.\ in Data Science from \textbf{SUSTech}; Research Assistant at \textbf{SUSTech-NLP} (adv.\ Prof.~Guanhua Chen). I work on \textbf{how heterogeneous-capability LLMs should collaborate}: in \textbf{RouterXBench} I built a 3-axis evaluator and identified \emph{internal hidden states} as a more discriminative routing signal than verbose, logit, and external-embedding alternatives; in \textbf{Scope-then-Cover} I exploit a capability asymmetry inside exploration: a strong actor scopes a small high-recall subspace while frozen cheap workers cover it in parallel, exposed as a single \texttt{explore} action.
+M.S.\ in CS (Digital Skills for Health Transformation track) at \textbf{Institut Polytechnique de Paris (IP Paris)}; B.S.\ in Data Science from \textbf{SUSTech}; Research Assistant at \textbf{SUSTech-NLP} (adv.\ Prof.~Guanhua Chen). I work on \textbf{how heterogeneous-capability LLMs should collaborate}: in \textbf{RouterXBench} I built a 3-axis evaluator and identified \emph{internal hidden states} as a more discriminative routing signal than verbose, logit, and external-embedding alternatives; in \textbf{Scope-then-Cover} I exploit a capability asymmetry inside exploration: a strong actor scopes a small high-recall subspace while frozen cheap workers cover it in parallel, exposed as a single \texttt{explore} action.
 
 % ── EDUCATION ────────────────────────────────────────────────
 \section{Education}
 
 \entry{\unilogo{ipp.png}\enskip Institut Polytechnique de Paris}{Paris, France}
-\textit{M.S.\ in Computer Science} \hfill \textit{Sep 2025 -- Sep 2027}
+\textit{M.S.\ in Computer Science \textnormal{\small(Digital Skills for Health Transformation track)}} \hfill \textit{Sep 2025 -- Sep 2027}
 \begin{itemize}
   \item \textbf{ReflexSQL}: an exploration-and-memory Text-to-SQL agent on Spider~2.0-Lite \quad [\href{https://wwx777.github.io/assets/reflexsql-poster.pdf}{Poster}].
 \end{itemize}
 
-\vspace{3pt}
+\vspace{1pt}
 \entry{\unilogo{sustech.png}\enskip Southern University of Science and Technology (SUSTech)}{Shenzhen, China}
 \textit{B.S.\ in Data Science and Big Data Technology} \hfill \textit{Sep 2021 -- Jul 2025}
 \begin{itemize}
@@ -196,25 +198,22 @@ M.S.\ in CS at \textbf{Institut Polytechnique de Paris (IP Paris)}; B.S.\ in Dat
 
 (Co-)first author on the two papers above. Owned the experimental pipeline end-to-end (benchmark/baseline implementation, training and inference infrastructure, ablations, figure/table production) and led the framing and writing of both submissions.
 
-\vspace{2pt}
+\vspace{1pt}
 \entry{\raisebox{-0.5pt}{\includegraphics[height=8pt, width=16pt, keepaspectratio]{assets/logos/cv/bgi.png}}\enskip Institute of Intelligent Medical Research (IIMR), BGI}{Shenzhen, China}
 \textit{Machine Learning Intern (AI for Genomics).} \hfill \textit{Jul 2024 -- Jan 2025}
 
 cfDNA feature representation $+$ stacked ensemble for early colorectal cancer detection \tgenomics; owned feature engineering, model selection, and cross-validation. Reached \textbf{94.88\% sensitivity} on the held-out cohort.
 
-% ── HONORS ───────────────────────────────────────────────────
-\section{Honors \& Awards}
+\vspace{1pt}
+\entry{\unilogo{pku.png}\enskip Peking University Shenzhen Hospital}{Shenzhen, China}
+\textit{Data Analyst Intern.} \hfill \textit{Jul 2023 -- Oct 2023}
 
-\begin{itemize}
-  \item \textbf{Outstanding Graduate}, Zhiren College, SUSTech (Jul 2025).
-  \item \textbf{Outstanding Graduation Thesis}, Top 5\%, SUSTech (Jul 2025).
-  \item Outstanding Student Scholarship, SUSTech (Oct 2024).
-\end{itemize}
+\textbf{Clinical Outcome Analysis} \tclin: Performed biostatistical analysis on multi-timepoint clinical records to compare postoperative outcomes across surgical methods.
 
-% ── SKILLS ───────────────────────────────────────────────────
-\section{Skills}
+% ── HONORS & SKILLS ──────────────────────────────────────────
+\section{Honors \& Skills}
 
-\noindent\textbf{LLM \& ML:} inference (vLLM, SGLang), agentic-RL workflows. \quad \textbf{Dev:} Python, PyTorch, Docker, Linux, Git.\\
-\noindent\textbf{Languages:} English (IELTS 6.5, CET-4/6); Chinese (Native).
+\noindent\textbf{Honors:} Outstanding Graduate, Zhiren College, SUSTech (2025); Outstanding Graduation Thesis, Top 5\%, SUSTech (2025); Outstanding Student Scholarship, SUSTech (2024).\\
+\noindent\textbf{LLM \& Dev:} vLLM, SGLang, agentic-RL workflows; Python, PyTorch, Docker, Linux, Git. \quad \textbf{Languages:} English (IELTS 6.5, CET-4/6); Chinese (Native).
 
 \end{document}
