@@ -4,7 +4,10 @@
 \documentclass[10pt, a4paper]{article}
 
 % ── Encoding & CJK Support ──────────────────────────────────
-\usepackage[UTF8, heading=false]{ctex}
+\usepackage[UTF8, heading=false, fontset=none]{ctex}
+\setCJKmainfont{Heiti SC}[AutoFakeBold=true, AutoFakeSlant=true]
+\setCJKsansfont{Heiti SC}[AutoFakeBold=true]
+\setCJKmonofont{Heiti SC}[AutoFakeBold=true]
 \usepackage[T1]{fontenc}
 \usepackage{palatino}
 \usepackage{mathpazo}
@@ -132,13 +135,11 @@
 \begin{tabularx}{\linewidth}{@{}X r@{}}
   \raisebox{-4pt}{%
     {\fontsize{28}{32}\selectfont\bfseries 吴宛幸}%
-    \quad{\large\color{dategray}2027届}%
   }
   &
   \begin{tabular}[b]{@{}r@{}}
     \small 150 6798 2279 \quad \href{mailto:wuwanxing3574@gmail.com}{wuwanxing3574@gmail.com}\\[2pt]
     \small\href{https://github.com/wwx777}{GitHub}
-    \quad \href{https://wwx777.github.io}{个人主页}
   \end{tabular}
 \end{tabularx}
 
@@ -155,7 +156,7 @@
 \section{教育经历}
 
 \entry{\unilogo{ipp.png}\enskip 巴黎理工学院（Institut Polytechnique de Paris）}{法国巴黎}
-\textit{计算机科学硕士} \hfill \textit{2025.09 -- 2027.09}
+\textit{计算机科学硕士} \hfill \textit{2025.09 -- 至今}
 \begin{itemize}
   \item \textbf{ReflexSQL}：基于探索与记忆的 Text-to-SQL agent，验证于 Spider~2.0-Lite \quad [\href{https://wwx777.github.io/assets/reflexsql-poster.pdf}{海报}]。
 \end{itemize}
@@ -191,13 +192,13 @@
 \entry{\unilogo{sustech.png}\enskip SUSTech-NLP 实验室}{深圳}
 \textit{科研助理}，导师：陈冠华教授 \hfill \textit{2025.01 -- 至今}
 
-上述两篇论文的（共同）一作。端到端负责实验流水线（benchmark 与 baseline 实现、训练 / 推理基础设施、消融实验、图表生产），并主导两篇投稿的 framing 与写作。
+上述两篇论文的（共同）一作。RouterXBench/XRouter 中，基于 vLLM 搭建多模型推理与评测 pipeline，覆盖 batch inference、router evaluation，以及 logit/embedding/hidden-state 路由基线；Explore-Agent 中，使用 OPCD、skill-sd 与 Agent-RL 训练 Explore-Agent，部分成果已形成在投论文 Scope-then-Cover。
 
 \vspace{2pt}
 \entry{华大基因（BGI）智能医学研究院（IIMR）}{深圳}
 \textit{机器学习实习生（AI for Genomics）} \hfill \textit{2024.07 -- 2025.01}
 
-cfDNA 特征表示 $+$ stacked ensemble 用于结直肠癌早筛 \tgenomics；负责特征工程、模型选择与交叉验证。在 held-out 队列上达到 \textbf{94.88\%} 灵敏度。
+搭建 cfDNA 数据处理与机器学习建模 pipeline，用于结直肠癌早筛 \tgenomics，结合 cfDNA 表格特征与 BERT-style end-motif 序列编码器；负责特征清洗、统计筛选、模型导向特征选择、集成建模与交叉验证。在 held-out 队列上达到 \textbf{94.88\%} 灵敏度。
 
 % ── HONORS ───────────────────────────────────────────────────
 \section{荣誉与奖项}
