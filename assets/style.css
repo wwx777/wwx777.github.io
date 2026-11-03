@@ -11,7 +11,7 @@ a:focus-visible{outline:2px solid var(--link);outline-offset:5px}
 .skip:focus{top:10px}
 .site-header{display:flex;align-items:center;justify-content:space-between;gap:28px;position:sticky;top:0;z-index:10;min-height:78px;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .wordmark{font-size:15px;font-weight:600;color:var(--ink);white-space:nowrap;letter-spacing:-.025em}
-nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px 21px;font-size:12px}
+nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px 21px;font-size:15px}
 nav a{position:relative;padding:5px 0;color:var(--muted)}
 nav a::after{content:"";position:absolute;bottom:1px;left:0;right:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
 nav a:hover,nav a[aria-current="location"]{color:var(--ink);text-decoration:none}
@@ -92,7 +92,7 @@ footer a{color:var(--muted)}
  html{scroll-padding-top:126px}
  .wrap{padding-inline:24px}
  .site-header{display:block;padding-block:15px;min-height:0}
- nav{justify-content:flex-start;gap:3px 15px;font-size:11px;margin-top:8px}
+ nav{justify-content:flex-start;gap:5px 16px;font-size:13px;margin-top:8px}
  main.wrap{display:block;padding-top:32px;padding-bottom:34px}
  .profile{position:static;display:grid;grid-template-columns:80px minmax(0,1fr);gap:21px;padding-bottom:29px;margin-bottom:30px;border-bottom:1px solid var(--line)}
  .portrait{margin:2px 0 0;grid-column:1;grid-row:1}
