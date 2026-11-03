@@ -13,12 +13,12 @@ a:focus-visible{outline:2px solid var(--link);outline-offset:4px}
 .wordmark{font-size:15px;font-weight:600;color:var(--ink);white-space:nowrap}
 nav{display:flex;gap:12px 19px;flex-wrap:wrap;justify-content:flex-end;font-size:12px}
 nav a{color:var(--muted)}
-.hero{display:grid;grid-template-columns:1fr 140px;gap:40px;padding:36px 0 30px;align-items:start}
-.intro{grid-column:1;grid-row:1;min-width:0}
+.hero{display:grid;grid-template-columns:140px 1fr;gap:40px;padding:36px 0 30px;align-items:start}
+.intro{grid-column:2;grid-row:1;min-width:0}
 h1{font-size:29px;line-height:1.4;font-weight:600;margin:0 0 4px;letter-spacing:-.4px}
 .chinese{font-size:20px;font-weight:400;letter-spacing:0;margin-left:10px;color:#555}
 .affiliation{font-size:13px;color:var(--muted);margin:0 0 18px}
-.portrait{grid-column:2;grid-row:1;margin:5px 0 0}
+.portrait{grid-column:1;grid-row:1;margin:5px 0 0}
 .portrait img{display:block;width:140px;height:165px;object-fit:cover;object-position:center 38%;border-radius:2px}
 #about{padding:0;border:0}
 #about h2{font-size:18px;margin-bottom:10px}
@@ -67,7 +67,7 @@ footer a{color:#777}
   .site-header{display:block;padding-block:17px 14px}
   nav{justify-content:flex-start;gap:4px 17px;margin-top:9px;font-size:11px}
   .hero{display:flow-root;padding-top:27px}
-  .portrait{float:right;margin:3px 0 12px 18px}
+  .portrait{float:left;margin:3px 18px 12px 0}
   .portrait img{width:95px;height:113px}
   h1{font-size:26px}
   .chinese{display:block;font-size:17px;margin:3px 0 0}
