@@ -137,3 +137,7 @@ h1{font-family:var(--display);font-size:36px;letter-spacing:-.025em;font-weight:
 @media(max-width:700px){h1{font-size:29px}.content h2{font-size:25px}#about p{font-size:17px;line-height:1.8}.publication-info h3{font-size:18px}.paper-summary{font-size:16px}}
 
 [hidden]{display:none!important}
+
+.profile-location{display:inline-flex;align-items:baseline;gap:6px;margin-top:5px;font-size:12px;white-space:nowrap}
+.clock-icon{align-self:center;flex-shrink:0}
+#paris-clock{font-variant-numeric:tabular-nums;color:#5f666d}
