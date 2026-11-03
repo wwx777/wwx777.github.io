@@ -150,3 +150,10 @@ h1{font-family:var(--display);font-size:36px;letter-spacing:-.025em;font-weight:
 
 .profile-detail{display:inline-flex;align-items:baseline;gap:6px}
 .sidebar-icon{flex-shrink:0;position:relative;top:2px}
+
+/* Shared contact alignment and icon treatment. */
+.socials{gap:9px}
+.socials a,.socials a:first-child{display:inline-flex;align-items:center;gap:8px;font-size:12px;line-height:1.7;letter-spacing:0;color:var(--muted)}
+.socials a:hover{color:var(--link)}
+.contact-icon{flex-shrink:0;width:14px;height:14px}
+.socials a span{min-width:0;overflow-wrap:anywhere}
