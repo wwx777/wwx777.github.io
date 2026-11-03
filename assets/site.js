@@ -2,9 +2,9 @@
   const clock = document.querySelector('#paris-clock');
   if (clock) {
     const formatter = new Intl.DateTimeFormat('en-GB', {
-      timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+      timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZoneName: 'short'
     });
-    const updateClock = () => { clock.textContent = ` · ${formatter.format(new Date())}`; };
+    const updateClock = () => { clock.textContent = `${formatter.format(new Date())} · Local time`; };
     updateClock();
     setInterval(updateClock, 1000);
     document.addEventListener('visibilitychange', () => {

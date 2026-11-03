@@ -140,7 +140,10 @@ h1{font-family:var(--display);font-size:36px;letter-spacing:-.025em;font-weight:
 
 .profile-location{display:inline-flex;align-items:baseline;gap:6px;margin-top:5px;font-size:12px;white-space:nowrap}
 .clock-icon{align-self:center;flex-shrink:0}
-#paris-clock{font-variant-numeric:tabular-nums;color:#5f666d}
 
-.profile-detail{display:inline-flex;align-items:baseline;gap:6px}
-.sidebar-icon{flex-shrink:0;position:relative;top:2px}
+
+
+.profile-location{position:relative;cursor:help;border-radius:3px}
+.location-tooltip{position:absolute;z-index:20;top:calc(100% + 8px);left:0;padding:6px 10px;border-radius:6px;background:#292d32;color:#fff;font-size:12px;line-height:1.5;font-variant-numeric:tabular-nums;white-space:nowrap;box-shadow:0 3px 12px #00000015;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .16s ease}
+.profile-location:hover .location-tooltip,.profile-location:focus .location-tooltip{opacity:1;visibility:visible}
+.profile-location:focus-visible{outline:2px solid var(--link);outline-offset:4px}
