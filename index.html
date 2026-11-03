@@ -26,7 +26,7 @@
           <img src="assets/logos/sustech.png" alt="SUSTech" class="news-inline-logo" /> <strong>Southern University of Science and Technology (SUSTech)</strong>. I am currently a Research Assistant at <strong>SUSTech-NLP</strong>, advised by Prof. Guanhua Chen.
         </p>
         <p>
-          My research interests broadly lie in <strong>efficient LLM systems</strong> and <strong>agentic AI</strong>. I have worked on <strong>LLM–SLM model collaboration</strong> for efficient routing and inference, and I am currently working on <strong>efficient agentic exploration</strong> for test-time adaptation. I am also interested in <strong>LLM for health</strong>, as an application domain where low-resource constraints and trustworthiness are both critical.
+          I work on <strong>LLM agents, efficient inference, and post-training</strong>. My research covers how agents explore unfamiliar environments and learn from experience, how to evaluate model routing, and how to combine reasoning across languages through on-policy self-distillation. I am also interested in personal agents that adapt through interaction and feedback.
         </p>
       </section>
     <div class="hero-links"><a href="cv.pdf">CV (EN) ↗</a><a href="cv_cn.pdf">中文简历 ↗</a></div>
@@ -60,34 +60,55 @@
       </section>
 <section id="publications">
         <h2>Publications</h2>
-        <ul class="paper-list compact">
-          <li>
-            <div class="paper-line">
-              <strong>Can Weak Models Explore? Scope Then Cover for LLM Agent Adaptation</strong>
-              <span class="paper-venue upcoming">Under review</span>
+        <div class="research-list">
+          <article class="research-entry" id="scope-then-cover">
+            <div class="publication-row">
+              <figure class="paper-thumbnail">
+                <img src="assets/research/scope-figure-1.png" alt="Figure 1: exploration modes, information limits, actor-selected scopes, and parallel dispatch" width="4640" height="928" loading="lazy" />
+              </figure>
+              <div class="publication-info">
+                <h3>Can Weak Models Explore? Scope Then Cover for LLM Agent Adaptation</h3>
+                <p class="paper-authors"><strong>Wanxing Wu</strong>, Zhiwen Ruan, He Zhu<sup>†</sup>, Guanhua Chen<sup>†</sup></p>
+                <p class="paper-status">Under review</p>
+                <p class="paper-summary">What limits exploration when an agent does not yet know its environment? We study information and coverage, then use a strong actor to guide smaller scouts.</p>
+                <span class="paper-blog-pending">Blog · In preparation</span>
+              </div>
             </div>
-            <div class="paper-authors small"><strong>Wanxing Wu</strong>, Zhiwen Ruan, He Zhu<sup>†</sup>, Guanhua Chen<sup>†</sup> &nbsp;† Corresponding authors</div>
-          </li>
-          <li>
-            <div class="paper-line">
-              <strong>Cross-lingual Multi-view On-Policy Self-Distillation: Distilling Multilingual Views into a Single Target-Language Policy</strong>
-              <span class="paper-venue upcoming">Under review</span>
+
+          </article>
+
+          <article class="research-entry" id="cmopd">
+            <div class="publication-row">
+              <figure class="paper-thumbnail">
+                <img src="assets/research/cmopd-overview.png" alt="CMOPD fuses frozen self-teacher predictions from multiple language views on a student trajectory, then trains a single target-language policy" width="2400" height="1040" loading="lazy" />
+              </figure>
+              <div class="publication-info">
+                <h3>Cross-lingual Multi-view On-Policy Self-Distillation: Distilling Multilingual Views into a Single Target-Language Policy</h3>
+                <p class="paper-authors"><strong>Wanxing Wu</strong>, He Zhu<sup>†</sup>, Guanhua Chen<sup>†</sup></p>
+                <p class="paper-status">Under review</p>
+                <p class="paper-summary">Different languages offer complementary reasoning signals. CMOPD brings them into training so the model can answer directly in the target language.</p>
+                <span class="paper-blog-pending">Blog · In preparation</span>
+              </div>
             </div>
-            <div class="paper-authors small"><strong>Wanxing Wu</strong>, He Zhu<sup>†</sup>, Guanhua Chen<sup>†</sup> &nbsp;† Corresponding authors</div>
-          </li>
-          <li>
-            <div class="paper-line">
-              <strong>Towards Fair Evaluation of Routers in Collaborative LLM Systems</strong>
-              <span class="paper-venue upcoming">Under Review</span>
+
+          </article>
+
+          <article class="research-entry" id="routerxbench">
+            <div class="publication-row">
+              <figure class="paper-thumbnail">
+                <img src="assets/research/router-overview.png" alt="RouterXBench evaluates router discrimination, quality under a shared budget, and cost at a shared quality target; overview curves are illustrative" width="1600" height="614" loading="lazy" />
+              </figure>
+              <div class="publication-info">
+                <h3>Towards Fair Evaluation of Routers in Collaborative LLM Systems</h3>
+                <p class="paper-authors"><strong>Wanxing Wu*</strong>, He Zhu*, Yixia Li*, et al. <span class="contribution">(* equal contribution)</span></p>
+                <p class="paper-status">Under review · arXiv preprint</p>
+                <p class="paper-summary">A router that spots small-model failures is not always the best at spending a cloud budget. RouterXBench examines the requests receiving that budget.</p>
+                <div class="research-links"><a href="https://arxiv.org/abs/2602.11877">Paper</a><a href="https://github.com/zhuchichi56/RouterXBench">Code</a><span class="paper-blog-pending">Blog · In preparation</span></div>
+              </div>
             </div>
-            <div class="paper-line secondary">
-              <span class="paper-authors small"><strong>Wanxing Wu*</strong>, He Zhu*, Yixia Li*, et al. &nbsp;* Equal contribution</span>
-              <span class="paper-links inline">
-                <a href="https://arxiv.org/abs/2602.11877"><img src="assets/logos/arxiv.svg" alt="arXiv" class="paper-link-icon" /></a>
-              </span>
-            </div>
-          </li>
-        </ul>
+
+          </article>
+        </div>
       </section>
 <section id="research">
         <h2>Research</h2>
@@ -97,10 +118,7 @@
             <div>
               <strong>SUSTech-NLP · Research Assistant</strong>
               <br /><span style="color:#888; font-size:0.9em;">Jan 2025 – Present · Shenzhen, China</span>
-              <ul style="margin-top:4px; padding-left:1.2em;">
-                <li><strong>LLM&ndash;SLM Collaboration:</strong> Proposed RouterXBench to decouple router ability from scenario alignment; systematically compared routing signals and showed that internal hidden states capture model uncertainty more effectively than output logits or external embeddings, leading to ProbeDirichlet with learnable Dirichlet aggregation across layers.</li>
-                <!-- <li><strong>Efficient Agentic Exploration:</strong> Found that small models explore as effectively as large ones if guided to the right subspace. Training LLMs via GRPO to compress search spaces, enabling cheap exploration in complex environments.</li> -->
-              </ul>
+              <p class="paper-summary">Research on agent exploration, cross-lingual self-distillation, and model routing. <a href="#publications">Read more about the projects above.</a></p>
             </div>
           </li>
         </ul>
@@ -114,7 +132,7 @@
               <strong>Institute of Intelligent Medical Research (IIMR), BGI · Machine Learning Intern</strong>
               <br /><span style="color:#888; font-size:0.9em;">Jul 2024 – Jan 2025 · Shenzhen, China</span>
               <ul style="margin-top:4px; padding-left:1.2em;">
-                <li>Developed cfDNA-based feature representations via statistical filtering and model-guided selection; applied ensemble learning for early colorectal cancer detection, achieving <strong>94.88% sensitivity</strong>.</li>
+                <li>Contributed to machine learning, modeling, and feature engineering for cfDNA-based early colorectal cancer screening.</li>
               </ul>
             </div>
           </li>
@@ -145,12 +163,6 @@
               </ul>
             </div>
           </li>
-          <li>
-            <div>
-              <strong>Conservative Off-Policy Trust Region Policy Optimization</strong>
-              <br /><span style="color:#888; font-size:0.9em;">Nov 2025 – Jan 2026</span>
-              <ul style="margin-top:4px; padding-left:1.2em;">
-                <li>Developed a dimension-wise masking strategy for off-policy TRPO that leverages on-policy gradient alignment to suppress conflicting update components, ensuring update directions remain consistent with the on-policy objective; validated on PyBullet/Gym locomotion tasks.</li>
               </ul>
             </div>
           </li>

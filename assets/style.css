@@ -22,7 +22,7 @@ h1{font-size:29px;line-height:1.4;font-weight:600;margin:0 0 4px;letter-spacing:
 .portrait img{display:block;width:140px;height:165px;object-fit:cover;object-position:center 38%;border-radius:2px}
 #about{padding:0;border:0}
 #about h2{font-size:18px;margin-bottom:10px}
-#about p{font-size:14px;margin:0 0 12px;line-height:1.85}
+#about p{font-size:16px;margin:0 0 12px;line-height:1.85}
 .hero-links,.socials{display:flex;flex-wrap:wrap;gap:4px 19px;font-size:12px;margin-top:13px}
 .socials{color:var(--muted);margin-top:7px}
 main>section{padding:27px 0;border-top:1px solid var(--line)}
@@ -73,7 +73,7 @@ footer a{color:#777}
   .chinese{display:block;font-size:17px;margin:3px 0 0}
   .affiliation{font-size:12px;margin-top:9px}
   #about h2{clear:both;padding-top:14px}
-  #about p{font-size:14px}
+  #about p{font-size:16px}
   main>section{padding-block:23px}
   h2{font-size:20px}
   .item-with-logo{gap:10px}
@@ -186,7 +186,7 @@ footer{padding-block:24px 32px;font-size:10px;letter-spacing:0}
   .chinese{font-size:16px;letter-spacing:.02em;margin:7px 0 0}
   .affiliation{font-size:11px;line-height:1.7;margin-top:10px}
   #about h2{padding-top:18px}
-  #about p{font-size:14px;line-height:1.9}
+  #about p{font-size:16px;line-height:1.9}
   main>section{padding-block:28px}
   .hero-links{margin-top:17px}
   .socials{gap:4px 15px}
@@ -199,4 +199,33 @@ footer{padding-block:24px 32px;font-size:10px;letter-spacing:0}
 @media print{
   .site-header{position:static;box-shadow:none;backdrop-filter:none}
   .reveal-pending{opacity:1;transform:none}
+}
+
+/* Readable body copy and restored illustrated publication entries. */
+body{font-size:16px}
+#about p{font-size:16px;line-height:1.85}
+#about h2{font-size:20px}
+.logo-list strong,.paper-line>strong{font-size:16px}
+.logo-list ul,.honors-inline-list{font-size:15px}
+.affiliation{font-size:14px}
+.hero-links,.socials{font-size:13px}
+.research-entry{padding:28px 0;border-bottom:1px solid var(--line)}
+.research-entry:first-child{padding-top:0}
+.research-entry:last-child{padding-bottom:0;border-bottom:0}
+.publication-row{display:grid;grid-template-columns:285px minmax(0,1fr);gap:28px;align-items:center}
+.paper-thumbnail{margin:0;min-width:0}
+.paper-thumbnail img{display:block;width:100%;height:auto;object-fit:contain}
+.publication-info h3{font-size:17px;line-height:1.5;letter-spacing:-.018em;margin:0 0 9px}
+.paper-authors{font-size:14px;line-height:1.7;margin:0 0 6px}
+.paper-status{font-size:13px;color:var(--muted);margin:0 0 10px}
+.paper-summary{font-size:15px;line-height:1.8;color:#424245;margin:10px 0}
+.research-links{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;font-size:13px}
+.paper-blog-pending{font-size:12px;color:var(--muted)}
+@media(max-width:700px){
+ .publication-row{grid-template-columns:minmax(0,1fr);gap:20px}
+ .paper-thumbnail{max-width:100%}
+ .publication-info h3{font-size:17px}
+ .logo-list ul{font-size:15px}
+ #about p{font-size:16px}
+ .socials{font-size:12px}
 }
