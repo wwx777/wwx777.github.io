@@ -19,7 +19,7 @@ nav a:hover::after,nav a[aria-current="location"]::after{transform:scaleX(1)}
 main.wrap{display:grid;grid-template-columns:214px minmax(0,1fr);gap:66px;align-items:start;padding-top:58px;padding-bottom:55px}
 .profile{position:sticky;top:126px;min-width:0}
 .portrait{margin:0 0 25px}
-.portrait img{display:block;width:164px;height:194px;object-fit:cover;object-position:center 38%;border-radius:7px}
+.portrait img{display:block;width:136px;height:161px;object-fit:cover;object-position:center 38%;border-radius:7px}
 .intro{min-width:0}
 h1{font:500 34px/1.18 "Iowan Old Style",Palatino,Georgia,serif;letter-spacing:-.035em;margin:0 0 14px}
 .chinese{display:block;font:400 18px/1.7 -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:.08em;color:#6c7075;margin-top:7px}
@@ -94,9 +94,9 @@ footer a{color:var(--muted)}
  .site-header{display:block;padding-block:15px;min-height:0}
  nav{justify-content:flex-start;gap:3px 15px;font-size:11px;margin-top:8px}
  main.wrap{display:block;padding-top:32px;padding-bottom:34px}
- .profile{position:static;display:grid;grid-template-columns:96px minmax(0,1fr);gap:21px;padding-bottom:29px;margin-bottom:30px;border-bottom:1px solid var(--line)}
+ .profile{position:static;display:grid;grid-template-columns:80px minmax(0,1fr);gap:21px;padding-bottom:29px;margin-bottom:30px;border-bottom:1px solid var(--line)}
  .portrait{margin:2px 0 0;grid-column:1;grid-row:1}
- .portrait img{width:96px;height:118px;border-radius:6px}
+ .portrait img{width:80px;height:98px;border-radius:6px}
  .intro{grid-column:2;grid-row:1}
  h1{font-size:28px;margin-bottom:10px}
  .chinese{font-size:16px;margin-top:5px}
