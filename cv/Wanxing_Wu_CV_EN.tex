@@ -1,0 +1,190 @@
+% ============================================================
+%  WANXING WU — Curriculum Vitae
+% ============================================================
+\documentclass[10pt, a4paper]{article}
+
+% ── Encoding & Font ──────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{palatino}
+\usepackage{mathpazo}
+\usepackage{microtype}
+
+% ── Page Layout ──────────────────────────────────────────────
+\usepackage[top=0.8cm, bottom=0.8cm, left=1.35cm, right=1.35cm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{3em}
+\linespread{1.00}\selectfont
+
+% ── Packages ─────────────────────────────────────────────────
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+
+% ── Colors ───────────────────────────────────────────────────
+\definecolor{headcol}{RGB}{30, 30, 30}
+\definecolor{rulecol}{RGB}{180, 50, 30}
+\definecolor{secline}{RGB}{200, 200, 200}
+\definecolor{linkcol}{RGB}{40, 80, 160}
+\definecolor{dategray}{RGB}{100, 100, 100}
+\definecolor{yearcolor}{RGB}{80, 80, 80}
+
+% Tag colors
+\definecolor{tagroute}{RGB}{130, 50, 160}
+\definecolor{taggenomics}{RGB}{40, 140, 90}
+\definecolor{tagrl}{RGB}{180, 100, 20}
+\definecolor{tageff}{RGB}{130, 50, 160}
+\definecolor{tagautoresearch}{RGB}{30, 100, 160}
+\definecolor{oralred}{RGB}{200, 40, 30}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor   = linkcol,
+  linkcolor  = linkcol,
+  pdfauthor  = {Wanxing Wu},
+  pdftitle   = {Wanxing Wu, Curriculum Vitae},
+}
+
+% ── Section Headers ──────────────────────────────────────────
+\titleformat{\section}
+  {\large\scshape\bfseries\color{headcol}}
+  {}{0em}{\MakeUppercase}
+  [\vspace{-7pt}{\color{secline}\rule{\linewidth}{0.4pt}}\vspace{0pt}]
+\titlespacing*{\section}{0pt}{3pt}{1pt}
+
+% ── Badge Tags ───────────────────────────────────────────────
+\newcommand{\badge}[2]{%
+  \tikz[baseline=(x.base)]{
+    \node[inner xsep=3.5pt, inner ysep=1.6pt, rounded corners=2.5pt,
+          draw=#1, line width=0.45pt,
+          text=#1, font=\fontsize{6}{7}\selectfont\sffamily]
+      (x) {#2};
+  }%
+}
+
+\newcommand{\troute}  {\badge{tagroute}{routing}}
+\newcommand{\tgenomics}{\badge{taggenomics}{genomics}}
+\newcommand{\trl}     {\badge{tagrl}{agentic}}
+\newcommand{\teff}    {\badge{tageff}{efficiency}}
+\newcommand{\tautoresearch} {\badge{tagautoresearch}{autoresearch}}
+
+% ── Bullet Lists ─────────────────────────────────────────────
+\setlist[itemize,1]{
+  leftmargin = 1.3em,
+  label      = {\small\textbullet},
+  itemsep    = 0pt,
+  topsep     = 1pt,
+  parsep     = 0pt,
+}
+
+% ── Helpers ──────────────────────────────────────────────────
+\newcommand{\unilogo}[1]{%
+  \raisebox{-0.5pt}{\includegraphics[height=8pt]{assets/#1}}%
+}
+\newcommand{\me}[1]{\textbf{#1}}
+\newcommand{\eqstar}{$^{*}$}
+\newcommand{\corr}{$^{\dagger}$}
+
+% Single publication block
+\newcommand{\pub}[4]{%
+  \vspace{1pt}%
+  \noindent\textbf{#1}\ifstrempty{#2}{}{\enskip #2}%
+  \begin{itemize}[topsep=0pt]
+    \item #3
+    \item \textit{#4}
+  \end{itemize}%
+}
+
+% Publication block with an extra "highlight" bullet
+\newcommand{\paperentry}[4]{%
+  \par\vspace{5pt}%
+  {\raggedright\textbf{#1}\ifstrempty{#2}{}{\enskip #2}\par}%
+  {\small #3\par}%
+  {\small\textit{#4}\par}%
+}
+\newcommand{\researchitem}[3]{%
+  \par\vspace{7pt}%
+  {\textbf{#1}\enskip #2\par}%
+  \vspace{1pt}#3\par
+}
+
+% Education / Experience entry
+\newcommand{\entry}[2]{%
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} & {\small\color{dategray}#2}
+  \end{tabularx}%
+  \par\vspace{0pt}%
+}
+
+% ── Header / Footer ──────────────────────────────────────────
+\pagestyle{empty}
+
+% ============================================================
+\begin{document}
+\thispagestyle{empty}
+\fontsize{10.3}{12.0}\selectfont
+
+% ── NAME BLOCK ───────────────────────────────────────────────
+\noindent
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+  \raisebox{-4pt}{%
+    {\fontsize{28}{32}\selectfont\bfseries WANXING WU}%
+
+  }
+  &
+  \begin{tabular}[b]{@{}r@{}}
+    \small +86 150 6798 2279\quad WeChat: wwx15067982279\\[2pt]
+    \small \href{mailto:wuwanxing3574@gmail.com}{wuwanxing3574@gmail.com}
+    \quad \href{https://github.com/wwx777}{GitHub}\quad\href{https://wwx777.github.io}{Homepage}
+    \quad \href{https://www.linkedin.com/in/wanxing-wu-b36996388/}{LinkedIn}
+  \end{tabular}
+\end{tabularx}
+
+\vspace{4pt}
+{\color{rulecol}\rule{\linewidth}{1.2pt}}
+\vspace{1pt}
+
+\section{Education}
+\entry{\unilogo{ipp.png}\enskip Institut Polytechnique de Paris}{Paris, France}
+\textit{M.S. in Computer Science (DS4Health track)}\hfill\textit{Sep 2025 -- May 2028}\\
+GPA: \textbf{16.6/20} (A+); Rank: \textbf{top 5\%}.\\
+{\small \href{https://www.topuniversities.com/universities/institut-polytechnique-de-paris}{QS Ranking: 43}; \href{https://www.timeshighereducation.com/world-university-rankings/institut-polytechnique-de-paris}{THE CS Ranking: 43}.}
+
+\vspace{4pt}
+\entry{\unilogo{sustech.png}\enskip Southern University of Science and Technology}{Shenzhen, China}
+\textit{B.S. in Data Science and Big Data Technology}\hfill\textit{Sep 2021 -- Jul 2025}\\
+Undergraduate advisor: \href{https://ghchen.me/}{Guanhua Chen}.
+
+\section{Research Experience}
+\entry{\unilogo{sustech.png}\enskip SUSTech-NLP}{Shenzhen, China}
+\textit{Research Assistant}\hfill\textit{Jan 2025 -- Present}\\
+Research advisor: \href{https://ghchen.me/}{Guanhua Chen}.
+\researchitem{Agent exploration and experience learning}{\trl}{To adapt to unfamiliar environments, agents first need to explore and gather information for their tasks. Studied \textbf{how to acquire useful exploration experience efficiently}, using two controlled experiments to examine environmental clues, candidate-space size, and inspection count. Proposed \textbf{Scope-then-Cover}: a strong actor selects exploration scopes based on the task; weak scouts inspect candidates in parallel and return observations. Applied the method to household, shopping, and coding tasks to help agents gather information for task decisions, then reused exploration trajectories for online learning and an experience memory to improve performance on later tasks.}
+\researchitem{Multi-view on-policy self-distillation}{\badge{tagrl}{post-training}}{Studied how to \textbf{consolidate complementary reasoning capabilities elicited under different conditions into a single policy}. Using cross-lingual reasoning as a testbed, proposed \textbf{CMOPD, Cross-lingual Multi-view On-Policy Self-Distillation}: fused token-level supervision from a frozen model under different language conditions to guide student-generated reasoning trajectories. After training, the model reasons directly in the target language without multilingual generation or answer aggregation. Compared reasoning performance at three model scales across four low-resource languages, examining what different language views contribute and how to combine their supervision effectively.}
+\researchitem{Edge--cloud model routing evaluation}{\troute}{Edge--cloud collaboration handles routine requests with a local small model and calls a cloud LLM when needed. With limited cloud spending, which requests should receive priority? Studied \textbf{how to evaluate the allocation of cloud resources} through \textbf{RouterXBench}, assessing whether routers identify requests the small model struggles with, alongside the resulting answer quality and cloud cost. Compared \textbf{prioritizing difficult requests versus helping more requests}, and how budget and quality requirements affect router selection. Built six tests spanning instruction following, knowledge, and mathematics, and provided \textbf{MeanProbe}, a lightweight reference router.}
+
+\section{Papers and Preprints}
+{\small $^*$Equal contribution; $^\dagger$corresponding author.}
+\paperentry{Can Weak Models Explore? Scope Then Cover for LLM Agent Adaptation}{\trl}{\me{Wanxing Wu}, Zhiwen Ruan, He Zhu\corr, Guanhua Chen\corr}{Under review at ICLR 2027}
+\paperentry{Cross-lingual Multi-view On-Policy Self-Distillation: Distilling Multilingual Views into a Single Target-Language Policy}{\badge{tagrl}{post-training}}{\me{Wanxing Wu}, He Zhu\corr, Guanhua Chen\corr}{Under review at ICLR 2027}
+\paperentry{Towards Fair Evaluation of Routers in Collaborative LLM Systems}{\troute}{\me{Wanxing Wu}\eqstar, He Zhu\eqstar, Yixia Li\eqstar, \ldots, Guanhua Chen\corr}{Under review at NAACL\quad [\href{https://arxiv.org/abs/2602.11877}{arXiv:2602.11877}]\quad \href{https://github.com/zhuchichi56/RouterXBench}{Code}}
+
+\section{Honors and Awards}
+\begin{itemize}[itemsep=1pt, topsep=1pt]
+\item \textbf{Outstanding Graduate}, Zhiren College, SUSTech (Jul 2025).
+\item \textbf{Outstanding Graduation Thesis}, top 5\%, SUSTech (Jul 2025).
+\item Outstanding Student Scholarship, SUSTech (Oct 2024).
+\end{itemize}
+\section{Skills}
+\textbf{Technical:} Python, PyTorch, Transformers, vLLM.\\
+\textbf{English:} IELTS 6.5.
+\end{document}
