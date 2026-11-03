@@ -141,3 +141,6 @@ h1{font-family:var(--display);font-size:36px;letter-spacing:-.025em;font-weight:
 .profile-location{display:inline-flex;align-items:baseline;gap:6px;margin-top:5px;font-size:12px;white-space:nowrap}
 .clock-icon{align-self:center;flex-shrink:0}
 #paris-clock{font-variant-numeric:tabular-nums;color:#5f666d}
+
+.profile-detail{display:inline-flex;align-items:baseline;gap:6px}
+.sidebar-icon{flex-shrink:0;position:relative;top:2px}
