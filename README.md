@@ -14,3 +14,7 @@ Serve this directory with any static HTTP server for local preview. GitHub Pages
 Research copy is adapted from the author's current CV. Under-review venues are not named on the homepage.
 
 This repository was initialized independently; it does not inherit another homepage's source or Git history.
+
+## Blog status
+
+The three research posts are in preparation. Their titles and topics appear in the homepage Blog section, without links or publication dates. No earlier blog drafts are included in this repository. Add article links only after reviewing and publishing each post.
