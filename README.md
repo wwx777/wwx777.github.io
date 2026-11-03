@@ -18,7 +18,7 @@ This repository was initialized independently; it does not inherit another homep
 
 ## Blog status
 
-The three research posts are in preparation. Their titles and topics appear in the homepage Blog section, without links or publication dates. No earlier blog drafts are included in this repository. Add article links only after reviewing and publishing each post.
+The three research posts are in preparation. The Blog section and publication Blog placeholders are hidden, and the Blog navigation link is omitted until posts are ready. No earlier blog drafts are published. Reveal the section and add article links only after reviewing and publishing each post.
 
 ## CV editing and publishing
 
