@@ -1,11 +1,12 @@
 # Wanxing Wu — personal homepage
 
-A standalone, original static website for Wanxing Wu. Built with semantic HTML, CSS and locally hosted assets. No framework, build step, analytics, or external font requests.
+A standalone, original static website for Wanxing Wu. Built with semantic HTML, CSS and locally hosted assets. No framework, build step, analytics, or external font requests. A small progressive-enhancement script adds navigation state and restrained scroll reveals, with reduced-motion support.
 
 ## Files
 
 - `index.html`: homepage content
 - `assets/style.css`: responsive design
+- `assets/site.js`: scroll navigation and motion
 - `assets/portrait.jpg`: personal graduation portrait
 - `cv.pdf` / `cv_cn.pdf`: current English / Chinese CV
 
