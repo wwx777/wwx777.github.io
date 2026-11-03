@@ -43,7 +43,7 @@
     }
   }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
 
-  for (const section of document.querySelectorAll('main > section')) {
+  for (const section of document.querySelectorAll('.content > section')) {
     if (section.getBoundingClientRect().top <= window.innerHeight) continue;
     section.classList.add('reveal-pending');
     observer.observe(section);
