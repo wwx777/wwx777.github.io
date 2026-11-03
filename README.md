@@ -50,3 +50,6 @@ compile LaTeX. Editing only a `.tex` file through GitHub's web editor bypasses
 local hooks, so use the local checkout above or upload both generated PDFs.
 Older Documents/resume files are retained as history; edit the sources here
 for future updates. Existing `/cv.pdf` and `/cv_cn.pdf` URLs stay stable.
+
+The footer displays the last publishing commit date. The local pre-commit hook
+runs `scripts/update_date.py`, using Europe/Paris, and stages the updated date.

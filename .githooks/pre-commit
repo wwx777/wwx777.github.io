@@ -8,3 +8,5 @@ if git diff --cached --name-only -- cv scripts/build_cv.py | grep -q .; then
     python3 scripts/build_cv.py
     git add cv.pdf cv_cn.pdf
 fi
+python3 scripts/update_date.py
+git add index.html
