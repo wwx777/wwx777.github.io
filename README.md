@@ -11,6 +11,6 @@ A standalone, original static website for Wanxing Wu. Built with semantic HTML, 
 
 Serve this directory with any static HTTP server for local preview. GitHub Pages serves the `main` branch from the repository root.
 
-Research diagrams are conceptual illustrations, not experimental plots. Research copy is adapted from the author's current CV. Under-review venues are not named on the homepage.
+Research copy is adapted from the author's current CV. Under-review venues are not named on the homepage.
 
 This repository was initialized independently; it does not inherit another homepage's source or Git history.
